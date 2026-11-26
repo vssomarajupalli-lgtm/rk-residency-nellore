@@ -31,7 +31,7 @@ export const translations = {
     benefits: [
       {
         title: 'Best Direct Call Rate',
-        desc: 'AC Single ₹900 • AC Double ₹1,250 per night',
+        desc: 'AC Single ₹900 • AC Double ₹1,250 for 24 hrs (Day & Night)',
       },
       {
         title: 'Couple Friendly & Complete Privacy',
@@ -216,7 +216,7 @@ export const translations = {
     benefits: [
       {
         title: 'అత్యుత్తమ డైరెక్ట్ కాల్ ధర',
-        desc: 'ఏసీ సింగిల్ ₹900 • ఏసీ డబుల్ ₹1,250 / రాత్రి',
+        desc: 'ఏసీ సింగిల్ ₹900 • ఏసీ డబుల్ ₹1,250 / 24 గంటలకు (డే & నైట్)',
       },
       {
         title: 'కపుల్ ఫ్రెండ్లీ & పూర్తి ప్రైవసీ',
