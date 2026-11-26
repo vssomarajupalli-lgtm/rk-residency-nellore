@@ -1,0 +1,18 @@
+{
+  "name": "RK Residency — 5-Floor Hotel, Nellore",
+  "short_name": "RK Residency",
+  "description": "Independent 5-floor hotel on Muthukur Road, Nellore, opposite Parthasaradhi Arch near Narayana Medical College. Direct call booking for AC Double and AC Single rooms.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F5",
+  "theme_color": "#7C5C3E",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/exterior-building.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}

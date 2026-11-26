@@ -1,0 +1,19 @@
+# Dependencies & Build
+node_modules/
+dist/
+dist-ssr
+*.local
+.env
+.env.*
+
+# Privacy Lock - Never include guest or housekeeping registers
+*.xlsx
+*.xls
+*.csv
+
+# Logs & Editor
+npm-debug.log*
+yarn-debug.log*
+.vscode/*
+!.vscode/extensions.json
+.DS_Store

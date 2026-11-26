@@ -1,0 +1,118 @@
+import { useState } from 'react'
+import { Phone, Menu, X } from 'lucide-react'
+import hotelData from '../data/hotelData.json'
+
+export default function Header({ lang, setLang, t }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const primaryPhone = hotelData.hotel.phoneLinks[0]
+
+  const navItems = [
+    { href: '#rooms', label: t.nav.rooms },
+    { href: '#ideal-stay', label: t.nav.idealStay },
+    { href: '#amenities', label: t.nav.amenities },
+    { href: '#gallery', label: t.nav.gallery },
+    { href: '#faq', label: t.nav.faq },
+    { href: '#location', label: t.nav.location },
+  ]
+
+  return (
+    <header className="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E6DFD5]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
+        {/* Brand */}
+        <a href="#top" className="flex flex-col leading-tight group">
+          <span className="font-serif-display text-2xl sm:text-[26px] font-semibold tracking-tight text-[#221E1B] group-hover:text-[#7C5C3E] transition-colors">
+            {hotelData.hotel.name}
+          </span>
+          <span className="text-[11px] uppercase tracking-[0.16em] text-[#7A6F66] font-medium">
+            {lang === 'te' ? hotelData.hotel.taglineTe : hotelData.hotel.tagline}
+          </span>
+        </a>
+
+        {/* Desktop Nav */}
+        <nav className="hidden lg:flex items-center gap-6 text-[15px] font-semibold text-[#3F3832]">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="hover:text-[#7C5C3E] transition-colors whitespace-nowrap"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        {/* Actions: Language Toggle + Call Button */}
+        <div className="flex items-center gap-2.5 sm:gap-3">
+          <div
+            className="inline-flex items-center rounded-full border border-[#DDD4C8] bg-white p-0.5 text-xs sm:text-sm font-semibold"
+            role="group"
+            aria-label="Language switcher"
+          >
+            <button
+              type="button"
+              onClick={() => setLang('en')}
+              className={`px-3 py-1 rounded-full transition-colors cursor-pointer ${
+                lang === 'en'
+                  ? 'bg-[#7C5C3E] text-white'
+                  : 'text-[#5C534B] hover:text-[#221E1B]'
+              }`}
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              onClick={() => setLang('te')}
+              className={`px-3 py-1 rounded-full transition-colors cursor-pointer ${
+                lang === 'te'
+                  ? 'bg-[#7C5C3E] text-white'
+                  : 'text-[#5C534B] hover:text-[#221E1B]'
+              }`}
+            >
+              తెలుగు
+            </button>
+          </div>
+
+          <a
+            href={primaryPhone.tel}
+            className="hidden sm:inline-flex items-center gap-2 bg-[#7C5C3E] hover:bg-[#664B32] text-white text-[15px] font-bold px-5 py-2.5 rounded-full shadow-md transition-all whitespace-nowrap"
+          >
+            <Phone className="w-4 h-4" />
+            <span>{primaryPhone.display}</span>
+          </a>
+
+          <button
+            type="button"
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="lg:hidden p-2 rounded-lg text-[#4F4740] hover:bg-[#EFEAE2]"
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Dropdown */}
+      {menuOpen && (
+        <div className="lg:hidden bg-[#FAF8F5] border-t border-[#E6DFD5] px-4 py-4 space-y-2">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={() => setMenuOpen(false)}
+              className="block py-2 px-3 rounded-lg text-sm font-medium text-[#221E1B] hover:bg-[#EFEAE2]"
+            >
+              {item.label}
+            </a>
+          ))}
+          <a
+            href={primaryPhone.tel}
+            className="mt-2 flex items-center justify-center gap-2 w-full bg-[#7C5C3E] text-white text-sm font-semibold px-4 py-3 rounded-xl"
+          >
+            <Phone className="w-4 h-4" />
+            <span>{t.nav.callToBook}: {primaryPhone.display}</span>
+          </a>
+        </div>
+      )}
+    </header>
+  )
+}
