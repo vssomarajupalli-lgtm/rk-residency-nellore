@@ -16,29 +16,37 @@ export default function Header({ lang, setLang, t }) {
   ]
 
   return (
-    <header className="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E6DFD5]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
-        {/* Brand */}
-        <a href="#top" className="flex flex-col leading-tight group">
-          <span className="font-serif-display text-2xl sm:text-[26px] font-semibold tracking-tight text-[#221E1B] group-hover:text-[#7C5C3E] transition-colors">
-            {hotelData.hotel.name}
+    <header className="sticky top-0 z-40 bg-gradient-to-r from-[#FDF8EE] via-[#FAF3E5] to-[#FDF8EE] backdrop-blur-md border-b-2 border-[#C89D54]/45 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-3 lg:gap-4">
+        {/* Brand: 3D Monogram Crest + 3D Embossed Metallic Title */}
+        <a href="#top" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+          <span
+            aria-hidden="true"
+            className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-b from-[#3A291C] to-[#1E140D] border-2 border-[#C89D54] shadow-[0_3px_0_#7A5B36,0_6px_14px_rgba(45,33,24,0.28)] flex items-center justify-center font-serif-display text-base sm:text-lg font-bold tracking-wider text-[#F7E7CE] shrink-0 group-hover:brightness-110 transition-all"
+          >
+            RK
           </span>
-          <span className="text-[11px] uppercase tracking-[0.16em] text-[#7A6F66] font-medium">
-            {lang === 'te'
-              ? hotelData.hotel.taglineTe
-              : lang === 'hi'
-                ? hotelData.hotel.taglineHi
-                : hotelData.hotel.tagline}
+          <span className="flex flex-col leading-tight">
+            <span className="font-serif-display text-2xl md:text-3xl font-bold tracking-tight animate-gold-shimmer [text-shadow:0_1px_0_#FFF8E7,0_2px_0_#C89D54,0_4px_10px_rgba(45,33,24,0.28)] whitespace-nowrap">
+              {hotelData.hotel.name}
+            </span>
+            <span className="text-[11px] uppercase tracking-[0.18em] text-[#7A5B36] font-semibold whitespace-nowrap">
+              {lang === 'te'
+                ? hotelData.hotel.taglineTe
+                : lang === 'hi'
+                  ? hotelData.hotel.taglineHi
+                  : hotelData.hotel.tagline}
+            </span>
           </span>
         </a>
 
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-6 text-[15px] font-semibold text-[#3F3832]">
+        {/* Desktop Nav — Clean & Flat */}
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-6 text-[15px] font-semibold text-[#3B2A1A]">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="hover:text-[#7C5C3E] transition-colors whitespace-nowrap"
+              className="hover:text-[#9C6F34] transition-colors whitespace-nowrap"
             >
               {item.label}
             </a>
