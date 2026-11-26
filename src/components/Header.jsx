@@ -42,16 +42,16 @@ export default function Header({ lang, setLang, t }) {
         </nav>
 
         {/* Actions: Language Toggle + Call Button */}
-        <div className="flex items-center gap-2.5 sm:gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0 relative z-10">
           <div
-            className="inline-flex items-center rounded-full border border-[#DDD4C8] bg-white p-0.5 text-xs sm:text-sm font-semibold"
+            className="inline-flex items-center rounded-full border border-[#DDD4C8] bg-white p-0.5 text-xs sm:text-sm font-semibold shrink-0 touch-manipulation"
             role="group"
             aria-label="Language switcher"
           >
             <button
               type="button"
               onClick={() => setLang('en')}
-              className={`px-3 py-1 rounded-full transition-colors cursor-pointer ${
+              className={`px-3 py-1.5 rounded-full transition-colors cursor-pointer whitespace-nowrap touch-manipulation ${
                 lang === 'en'
                   ? 'bg-[#7C5C3E] text-white'
                   : 'text-[#5C534B] hover:text-[#221E1B]'
@@ -62,7 +62,7 @@ export default function Header({ lang, setLang, t }) {
             <button
               type="button"
               onClick={() => setLang('te')}
-              className={`px-3 py-1 rounded-full transition-colors cursor-pointer ${
+              className={`px-3 py-1.5 rounded-full transition-colors cursor-pointer whitespace-nowrap touch-manipulation ${
                 lang === 'te'
                   ? 'bg-[#7C5C3E] text-white'
                   : 'text-[#5C534B] hover:text-[#221E1B]'
