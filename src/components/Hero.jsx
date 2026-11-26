@@ -104,24 +104,26 @@ export default function Hero({ lang = 'en', t }) {
       {/* Zero-Box Horizontal Bottom Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-8 sm:pb-10">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-          {/* Left: Badge + Headline + 1-line Subtext + Direct Note */}
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/45 border border-white/25 text-[#FAF5EE] text-xs sm:text-sm font-semibold tracking-wide uppercase mb-3">
+          {/* Left: Location Badge + Tight Dark-Tint Text Block */}
+          <div className="max-w-xl">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/50 border border-white/25 text-[#FAF5EE] text-xs sm:text-sm font-semibold tracking-wide uppercase mb-3">
               <MapPin className="w-4 h-4 text-[#E4B88A] shrink-0" />
               <span>{t.hero.badge}</span>
             </div>
 
-            <h1 className="font-serif-display text-3xl sm:text-5xl lg:text-[3.35rem] font-bold text-[#FFF3D1] leading-[1.08] tracking-tight mb-2.5 [text-shadow:0_3px_14px_rgba(0,0,0,0.95)]">
-              {t.hero.headline}
-            </h1>
+            <div className="bg-black/50 backdrop-blur-[2px] border border-white/15 rounded-2xl px-5 py-4 max-w-xl">
+              <h1 className="font-serif-display text-3xl sm:text-5xl lg:text-[3.1rem] font-bold text-[#FFF3D1] leading-[1.08] tracking-tight mb-2 [text-shadow:0_3px_14px_rgba(0,0,0,0.95)]">
+                {t.hero.headline}
+              </h1>
 
-            <p className="text-sm sm:text-base lg:text-lg text-[#F7EFE2] leading-snug font-medium [text-shadow:0_3px_14px_rgba(0,0,0,0.95)]">
-              {t.hero.subheadline}
-            </p>
+              <p className="text-sm sm:text-base lg:text-lg text-[#F7EFE2] leading-snug font-medium [text-shadow:0_3px_14px_rgba(0,0,0,0.95)]">
+                {t.hero.subheadline}
+              </p>
 
-            <p className="mt-2.5 text-xs sm:text-sm text-[#E4B88A] font-semibold hero-text-shadow">
-              {t.hero.directNote}
-            </p>
+              <p className="mt-2.5 text-xs sm:text-sm text-[#E4B88A] font-semibold [text-shadow:0_2px_8px_rgba(0,0,0,0.85)]">
+                {t.hero.directNote}
+              </p>
+            </div>
           </div>
 
           {/* Right: Call Buttons + Click-to-Listen Audio Pill */}
