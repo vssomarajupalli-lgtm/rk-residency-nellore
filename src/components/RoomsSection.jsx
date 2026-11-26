@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Phone, Maximize2, Check, Layers, Building2 } from 'lucide-react'
 import hotelData from '../data/hotelData.json'
 import useRevealOnScroll from '../hooks/useRevealOnScroll'
+import { assetUrl } from '../utils/assetUrl'
 
 function RoomCard({ room, lang, t, delay }) {
   const [selectedImg, setSelectedImg] = useState(0)
@@ -22,7 +23,7 @@ function RoomCard({ room, lang, t, delay }) {
       {/* Main Image with smooth hover zoom */}
       <div className="relative aspect-[16/10] overflow-hidden bg-[#EFEAE2] group">
         <img
-          src={room.images[selectedImg]}
+          src={assetUrl(room.images[selectedImg])}
           alt={name}
           loading="lazy"
           className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -46,7 +47,7 @@ function RoomCard({ room, lang, t, delay }) {
                   : 'border-transparent opacity-70 hover:opacity-100'
               }`}
             >
-              <img src={imgSrc} alt={`${name} view ${idx + 1}`} className="w-full h-full object-cover" />
+              <img src={assetUrl(imgSrc)} alt={`${name} view ${idx + 1}`} className="w-full h-full object-cover" />
             </button>
           ))}
         </div>

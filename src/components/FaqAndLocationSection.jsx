@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ChevronDown, MapPin, Phone, Wallet, ExternalLink, Instagram, Facebook } from 'lucide-react'
 import hotelData from '../data/hotelData.json'
 import useRevealOnScroll from '../hooks/useRevealOnScroll'
+import { assetUrl } from '../utils/assetUrl'
 
 export default function FaqAndLocationSection({ lang, t }) {
   const [openIdx, setOpenIdx] = useState(0)
@@ -126,7 +127,7 @@ export default function FaqAndLocationSection({ lang, t }) {
                   </div>
                   {upiQrEnabled && upiQrImage && (
                     <img
-                      src={upiQrImage}
+                      src={assetUrl(upiQrImage)}
                       alt="UPI Payment QR"
                       className="mt-3 w-36 h-36 rounded-xl border border-[#DDD4C8]"
                     />

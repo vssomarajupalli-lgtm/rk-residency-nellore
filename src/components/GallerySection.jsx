@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react'
 import { X, ZoomIn, ZoomOut, ChevronLeft, ChevronRight } from 'lucide-react'
 import hotelData from '../data/hotelData.json'
 import useRevealOnScroll from '../hooks/useRevealOnScroll'
+import { assetUrl } from '../utils/assetUrl'
 
 export default function GallerySection({ lang, t }) {
   const [activeCategory, setActiveCategory] = useState('all')
@@ -113,7 +114,7 @@ export default function GallerySection({ lang, t }) {
                 style={{ animationDelay: `${idx * 50}ms` }}
               >
                 <img
-                  src={item.src}
+                  src={assetUrl(item.src)}
                   alt={title}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -187,7 +188,7 @@ export default function GallerySection({ lang, t }) {
             </button>
 
             <img
-              src={activePhoto.src}
+              src={assetUrl(activePhoto.src)}
               alt={lang === 'te' ? activePhoto.titleTe : activePhoto.titleEn}
               style={{ transform: `scale(${zoom})` }}
               className="max-h-[80vh] max-w-full object-contain rounded-lg transition-transform duration-200 select-none"

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Phone, MapPin } from 'lucide-react'
 import hotelData from '../data/hotelData.json'
+import { assetUrl } from '../utils/assetUrl'
 
 export default function Hero({ t }) {
   const [activeSlide, setActiveSlide] = useState(0)
@@ -31,13 +32,13 @@ export default function Hero({ t }) {
           loop
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          src={heroVideoUrl}
+          src={assetUrl(heroVideoUrl)}
         />
       ) : (
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <img
             key={currentSlide.src}
-            src={currentSlide.src}
+            src={assetUrl(currentSlide.src)}
             alt={currentSlide.alt}
             className="w-full h-full object-cover animate-ken-burns"
           />
