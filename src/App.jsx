@@ -21,7 +21,7 @@ export default function App() {
       <TopTicker t={t} />
       <Header lang={lang} setLang={setLang} t={t} />
       <main className="flex-1">
-        <Hero t={t} />
+        <Hero lang={lang} t={t} />
         <BenefitsStrip t={t} />
         <RoomsSection lang={lang} t={t} />
         <IdealStaySection t={t} />

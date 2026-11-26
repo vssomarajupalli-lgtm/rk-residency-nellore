@@ -1,10 +1,13 @@
-import { useEffect, useState } from 'react'
-import { Phone, MapPin } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
+import { Phone, MapPin, Volume2, Pause } from 'lucide-react'
 import hotelData from '../data/hotelData.json'
 import { assetUrl } from '../utils/assetUrl'
 
-export default function Hero({ t }) {
+export default function Hero({ lang = 'en', t }) {
   const [activeSlide, setActiveSlide] = useState(0)
+  const [isPlayingAudio, setIsPlayingAudio] = useState(false)
+  const audioRef = useRef(null)
+
   const slides = hotelData.heroSlides
   const { heroVideoEnabled, heroVideoUrl } = hotelData.featureFlags
   const [p1, p2] = hotelData.hotel.phoneLinks
@@ -17,7 +20,52 @@ export default function Hero({ t }) {
     return () => clearInterval(timer)
   }, [heroVideoEnabled, slides.length])
 
+  // Stop audio cleanly whenever user switches EN | తెలుగు or unmounts
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.pause()
+      audioRef.current.currentTime = 0
+      audioRef.current = null
+    }
+    setIsPlayingAudio(false)
+  }, [lang])
+
+  useEffect(() => {
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current = null
+      }
+    }
+  }, [])
+
+  const toggleAudio = () => {
+    if (isPlayingAudio && audioRef.current) {
+      audioRef.current.pause()
+      audioRef.current.currentTime = 0
+      setIsPlayingAudio(false)
+      return
+    }
+
+    const src = assetUrl(lang === 'te' ? 'audio/welcome-te.mp3' : 'audio/welcome-en.mp3')
+    const audio = new Audio(src)
+    audioRef.current = audio
+    audio.onended = () => {
+      setIsPlayingAudio(false)
+      audioRef.current = null
+    }
+    audio.onerror = () => {
+      setIsPlayingAudio(false)
+      audioRef.current = null
+    }
+    audio.play()
+      .then(() => setIsPlayingAudio(true))
+      .catch(() => setIsPlayingAudio(false))
+  }
+
   const currentSlide = slides[activeSlide]
+  const listenLabel = lang === 'te' ? 'హోటల్ వివరాలు వినండి' : 'Listen Hotel Info (25s)'
+  const pauseLabel = lang === 'te' ? 'ఆపండి' : 'Pause Audio'
 
   return (
     <section
@@ -82,7 +130,38 @@ export default function Hero({ t }) {
             </a>
           </div>
 
-          <p className="mt-5 text-xs sm:text-sm text-[#F2EAE0] font-semibold">
+          {/* Optional Click-to-Listen Welcome Audio Pill (100% silent by default) */}
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              onClick={toggleAudio}
+              className={`inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border transition-all cursor-pointer whitespace-nowrap ${
+                isPlayingAudio
+                  ? 'bg-[#8A6542]/90 border-[#E4B88A] text-white shadow-md'
+                  : 'bg-black/35 hover:bg-black/50 border-white/30 text-[#FAF5EE]'
+              }`}
+              aria-pressed={isPlayingAudio}
+            >
+              {isPlayingAudio ? (
+                <>
+                  <Pause className="w-4 h-4 text-[#E4B88A] shrink-0" />
+                  <span>{pauseLabel}</span>
+                  <span className="inline-flex items-end gap-0.5 h-3.5 ml-0.5" aria-hidden="true">
+                    <span className="w-0.5 h-full bg-[#E4B88A] rounded-full animate-soundbar-1 origin-bottom" />
+                    <span className="w-0.5 h-full bg-[#E4B88A] rounded-full animate-soundbar-2 origin-bottom" />
+                    <span className="w-0.5 h-full bg-[#E4B88A] rounded-full animate-soundbar-3 origin-bottom" />
+                  </span>
+                </>
+              ) : (
+                <>
+                  <Volume2 className="w-4 h-4 text-[#E4B88A] shrink-0" />
+                  <span>{listenLabel}</span>
+                </>
+              )}
+            </button>
+          </div>
+
+          <p className="mt-4 text-xs sm:text-sm text-[#F2EAE0] font-semibold">
             {t.hero.directNote}
           </p>
         </div>

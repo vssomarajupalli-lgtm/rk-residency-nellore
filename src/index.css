@@ -109,3 +109,23 @@
 .reveal-on-scroll.revealed {
   animation: revealUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+
+/* Subtle animated sound bars when welcome audio is playing */
+@keyframes soundBar {
+  0%, 100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-soundbar-1 {
+  animation: soundBar 0.7s ease-in-out infinite;
+}
+.animate-soundbar-2 {
+  animation: soundBar 0.55s ease-in-out 0.15s infinite;
+}
+.animate-soundbar-3 {
+  animation: soundBar 0.8s ease-in-out 0.3s infinite;
+}
