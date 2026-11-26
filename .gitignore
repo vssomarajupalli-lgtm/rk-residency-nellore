@@ -5,6 +5,7 @@ dist-ssr
 *.local
 .env
 .env.*
+.vercel
 
 # Privacy Lock - Never include guest or housekeeping registers
 *.xlsx

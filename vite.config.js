@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/rk-residency-nellore/',
+  base: process.env.VERCEL ? '/' : '/rk-residency-nellore/',
   plugins: [react(), tailwindcss()],
 })
