@@ -1,6 +1,8 @@
 export const translations = {
   en: {
     ticker: [
+      'Couple Friendly (Valid Govt ID) | Complete Privacy',
+      'Peaceful & Silent Atmosphere on Muthukur Road',
       'Direct Way to Adani Krishnapatnam Port (Muthukur Road)',
       'Right Near Narayana Medical College & Super Specialty Hospital',
       'Close to Medicover & Apollo Specialty Hospitals',
@@ -32,16 +34,16 @@ export const translations = {
         desc: 'AC Single ₹900 • AC Double ₹1,250 per night',
       },
       {
+        title: 'Couple Friendly & Complete Privacy',
+        desc: 'Valid Govt ID required • Peaceful & silent atmosphere',
+      },
+      {
         title: 'Spacious Parking',
         desc: 'Covered indoor stilt & outdoor parking',
       },
       {
-        title: '5-Floor Lift & Power Backup',
-        desc: 'Elevator access to every floor with 24/7 backup',
-      },
-      {
-        title: '24/7 Reception Assistance',
-        desc: 'Round-the-clock front desk support',
+        title: '5-Floor Lift & 24/7 Reception',
+        desc: 'Elevator to all floors, power backup & 24/7 desk',
       },
     ],
     roomsSection: {
@@ -136,6 +138,10 @@ export const translations = {
           a: 'All room reservations are handled directly by phone at +91 90000 03253 or +91 90000 07231. Calling directly guarantees our best tariff (AC Single ₹900 / AC Double ₹1,250) with zero middleman fees.',
         },
         {
+          q: 'Is RK Residency couple friendly and private?',
+          a: 'Yes, RK Residency is couple friendly for guests presenting valid Government-issued photo ID for all adults. We ensure complete privacy and a peaceful, silent atmosphere away from city noise.',
+        },
+        {
           q: 'What identification is required during arrival?',
           a: 'A valid Government-issued photo ID (Aadhaar Card, Passport, Driving Licence, or Voter ID) is mandatory for all adult guests staying at the property.',
         },
@@ -180,6 +186,8 @@ export const translations = {
   },
   te: {
     ticker: [
+      'కపుల్ ఫ్రెండ్లీ (చెల్లుబాటు అయ్యే ప్రభుత్వ ID) | పూర్తి ప్రైవసీ',
+      'ముత్తుకూరు రోడ్‌లో ప్రశాంతమైన & నిశ్శబ్ద వాతావరణం',
       'అదానీ కృష్ణపట్నం పోర్ట్‌కు నేరుగా వెళ్లే మార్గం (ముత్తుకూరు రోడ్)',
       'నారాయణ మెడికల్ కాలేజ్ & సూపర్ స్పెషాలిటీ ఆసుపత్రికి అతి సమీపంలో',
       'మెడికవర్ & అపోలో స్పెషాలిటీ ఆసుపత్రులకు దగ్గరలో',
@@ -211,16 +219,16 @@ export const translations = {
         desc: 'ఏసీ సింగిల్ ₹900 • ఏసీ డబుల్ ₹1,250 / రాత్రి',
       },
       {
+        title: 'కపుల్ ఫ్రెండ్లీ & పూర్తి ప్రైవసీ',
+        desc: 'ప్రభుత్వ ID తప్పనిసరి • ప్రశాంతమైన, నిశ్శబ్ద వాతావరణం',
+      },
+      {
         title: 'విశాలమైన పార్కింగ్',
         desc: 'కవర్డ్ ఇండోర్ & అవుట్‌డోర్ పార్కింగ్ సౌకర్యం',
       },
       {
-        title: '5-అంతస్తుల లిఫ్ట్ & పవర్ బ్యాకప్',
-        desc: 'అన్ని అంతస్తులకు లిఫ్ట్ మరియు 24/7 పవర్ బ్యాకప్',
-      },
-      {
-        title: '24/7 రిసెప్షన్ సహాయం',
-        desc: 'అర్ధరాత్రి అయినా అందుబాటులో ఉండే ఫ్రంట్ డెస్క్',
+        title: '5-అంతస్తుల లిఫ్ట్ & 24/7 రిసెప్షన్',
+        desc: 'అన్ని అంతస్తులకు లిఫ్ట్, పవర్ బ్యాకప్ & 24/7 సహాయం',
       },
     ],
     roomsSection: {
@@ -313,6 +321,10 @@ export const translations = {
         {
           q: 'ఆర్కే రెసిడెన్సీలో గదిని ఎలా బుక్ చేసుకోవాలి?',
           a: 'గదుల బుకింగ్ కోసం +91 90000 03253 లేదా +91 90000 07231 నంబర్లకు నేరుగా కాల్ చేయండి. డైరెక్ట్ కాల్ ద్వారా ఎటువంటి అదనపు రుసుము లేకుండా ఉత్తమ ధర (సింగిల్ ₹900 / డబుల్ ₹1,250) లభిస్తుంది.',
+        },
+        {
+          q: 'ఆర్కే రెసిడెన్సీ కపుల్ ఫ్రెండ్లీనా? ప్రైవసీ ఎలా ఉంటుంది?',
+          a: 'అవును, చెల్లుబాటు అయ్యే ప్రభుత్వ ఫోటో గుర్తింపు కార్డు ఉన్న పెద్దలకు ఆర్కే రెసిడెన్సీ కపుల్ ఫ్రెండ్లీ. అతిథులకు పూర్తి ప్రైవసీ మరియు నగర రద్దీకి దూరంగా ప్రశాంతమైన, నిశ్శబ్ద వాతావరణం అందిస్తాము.',
         },
         {
           q: 'వసతి కోసం ఏ గుర్తింపు కార్డు అవసరం?',
