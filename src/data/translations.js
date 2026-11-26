@@ -20,7 +20,7 @@ export const translations = {
       callToBook: 'Call to Book',
     },
     hero: {
-      badge: '5-Floor Independent Hotel • Nellore',
+      badge: '5-Floor Independent Hotel • Nellore, AP - 524003',
       headline: 'Warm, Peaceful Stays on Muthukur Road',
       subheadline:
         'Clean air-conditioned rooms opposite Parthasaradhi Arch, near Narayana Medical College. Book directly by phone for the best room tariff.',
@@ -176,7 +176,7 @@ export const translations = {
       socialSoon: 'Official pages coming soon',
     },
     footer: {
-      rights: 'RK Residency, Nellore. All rights reserved.',
+      rights: 'RK Residency, Nellore, Andhra Pradesh - 524003. All rights reserved.',
       directOnly: 'Direct Call Booking: +91 90000 03253 / +91 90000 07231',
     },
     mobileBar: {
@@ -205,7 +205,7 @@ export const translations = {
       callToBook: 'బుకింగ్ కోసం కాల్',
     },
     hero: {
-      badge: '5-అంతస్తుల స్వతంత్ర హోటల్ • నెల్లూరు',
+      badge: '5-అంతస్తుల స్వతంత్ర హోటల్ • నెల్లూరు, AP - 524003',
       headline: 'ముత్తుకూరు రోడ్‌లో ప్రశాంతమైన, శుభ్రమైన బస',
       subheadline:
         'పార్థసారథి ఆర్చ్ ఎదురుగా, నారాయణ మెడికల్ కాలేజ్ దగ్గర ఏసీ గదులు. అత్యుత్తమ డైరెక్ట్ ధర కోసం నేరుగా ఫోన్ చేసి బుక్ చేసుకోండి.',
@@ -361,7 +361,7 @@ export const translations = {
       socialSoon: 'అధికారిక పేజీలు త్వరలో అందుబాటులోకి వస్తాయి',
     },
     footer: {
-      rights: 'ఆర్కే రెసిడెన్సీ, నెల్లూరు. అన్ని హక్కులు ప్రత్యేకించబడినవి.',
+      rights: 'ఆర్కే రెసిడెన్సీ, నెల్లూరు, ఆంధ్రప్రదేశ్ - 524003. అన్ని హక్కులు ప్రత్యేకించబడినవి.',
       directOnly: 'డైరెక్ట్ కాల్ బుకింగ్: +91 90000 03253 / +91 90000 07231',
     },
     mobileBar: {
@@ -390,7 +390,7 @@ export const translations = {
       callToBook: 'बुक करने के लिए कॉल करें',
     },
     hero: {
-      badge: '5-मंजिला स्वतंत्र होटल • नेल्लोर',
+      badge: '5-मंजिला स्वतंत्र होटल • नेल्लोर, AP - 524003',
       headline: 'मुथुकुर रोड पर शांत, स्वच्छ और आरामदायक ठहराव',
       subheadline:
         'पार्थसारथी आर्च के सामने, नारायणा मेडिकल कॉलेज के पास एसी कमरे। बिना किसी बिचौलिए के सीधे कॉल पर सबसे कम कीमत पाएं।',
@@ -546,7 +546,7 @@ export const translations = {
       socialSoon: 'आधिकारिक पेज जल्द ही',
     },
     footer: {
-      rights: 'आर के रेजीडेंसी, नेल्लोर। सर्वाधिकार सुरक्षित।',
+      rights: 'आर के रेजीडेंसी, नेल्लोर, आंध्र प्रदेश - 524003। सर्वाधिकार सुरक्षित।',
       directOnly: 'डायरेक्ट कॉल बुकिंग: +91 90000 03253 / +91 90000 07231',
     },
     mobileBar: {

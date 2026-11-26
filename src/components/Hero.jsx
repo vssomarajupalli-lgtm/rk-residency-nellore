@@ -126,52 +126,55 @@ export default function Hero({ lang = 'en', t }) {
             </div>
           </div>
 
-          {/* Right: Call Buttons + Click-to-Listen Audio Pill */}
-          <div className="flex flex-col items-start lg:items-end gap-3 shrink-0">
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
-              <a
-                href={p1.tel}
-                className="inline-flex items-center justify-center gap-3 bg-[#8A6542] text-white font-bold px-6 py-3.5 rounded-full text-base sm:text-lg shadow-[0_6px_0_#5c432c] active:translate-y-1 hover:brightness-110 transition-all animate-pulse-soft whitespace-nowrap"
-              >
-                <Phone className="w-5 h-5 shrink-0" />
-                <span>{p1.display}</span>
-              </a>
+          {/* Right: 2-Row Symmetric Dark-Gold CTA Group */}
+          <div className="flex flex-col gap-2.5 w-full lg:w-auto lg:min-w-[360px] shrink-0">
+            {/* Row 1: Full-width Primary Focus */}
+            <a
+              href={p1.tel}
+              className="inline-flex items-center justify-center gap-3 w-full bg-black/70 backdrop-blur-sm border-2 border-[#E4B88A] text-[#FFF3D1] font-bold text-lg px-6 py-3 rounded-full whitespace-nowrap animate-cta-pop hover:brightness-110 transition-all"
+            >
+              <Phone className="w-5 h-5 text-[#E4B88A] shrink-0" />
+              <span>{p1.display}</span>
+            </a>
+
+            {/* Row 2: 2 Equal Side-by-Side Secondary Buttons */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full">
               <a
                 href={p2.tel}
-                className="inline-flex items-center justify-center gap-2 bg-black/45 hover:bg-black/65 border border-white/35 text-white font-semibold px-5 py-3.5 rounded-full transition-all text-sm sm:text-base whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 bg-black/60 hover:bg-black/75 border border-white/25 text-white text-sm font-medium rounded-full px-4 py-2.5 whitespace-nowrap transition-all"
               >
                 <Phone className="w-4 h-4 text-[#E4B88A] shrink-0" />
                 <span>{t.roomsSection.orCall}: {p2.display}</span>
               </a>
-            </div>
 
-            <button
-              type="button"
-              onClick={toggleAudio}
-              className={`inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border transition-all cursor-pointer whitespace-nowrap ${
-                isPlayingAudio
-                  ? 'bg-[#8A6542]/95 border-[#E4B88A] text-white shadow-md'
-                  : 'bg-black/45 hover:bg-black/65 border-white/35 text-[#FAF5EE]'
-              }`}
-              aria-pressed={isPlayingAudio}
-            >
-              {isPlayingAudio ? (
-                <>
-                  <Pause className="w-4 h-4 text-[#E4B88A] shrink-0" />
-                  <span>{meta.pause}</span>
-                  <span className="inline-flex items-end gap-0.5 h-3.5 ml-0.5" aria-hidden="true">
-                    <span className="w-0.5 h-full bg-[#E4B88A] rounded-full animate-soundbar-1 origin-bottom" />
-                    <span className="w-0.5 h-full bg-[#E4B88A] rounded-full animate-soundbar-2 origin-bottom" />
-                    <span className="w-0.5 h-full bg-[#E4B88A] rounded-full animate-soundbar-3 origin-bottom" />
-                  </span>
-                </>
-              ) : (
-                <>
-                  <Volume2 className="w-4 h-4 text-[#E4B88A] shrink-0" />
-                  <span>{meta.listen}</span>
-                </>
-              )}
-            </button>
+              <button
+                type="button"
+                onClick={toggleAudio}
+                className={`inline-flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-medium border transition-all cursor-pointer whitespace-nowrap ${
+                  isPlayingAudio
+                    ? 'bg-[#8A6542]/95 border-[#E4B88A] text-white shadow-md'
+                    : 'bg-black/60 hover:bg-black/75 border-white/25 text-white'
+                }`}
+                aria-pressed={isPlayingAudio}
+              >
+                {isPlayingAudio ? (
+                  <>
+                    <Pause className="w-4 h-4 text-[#E4B88A] shrink-0" />
+                    <span>{meta.pause}</span>
+                    <span className="inline-flex items-end gap-0.5 h-3.5 ml-0.5" aria-hidden="true">
+                      <span className="w-0.5 h-full bg-[#E4B88A] rounded-full animate-soundbar-1 origin-bottom" />
+                      <span className="w-0.5 h-full bg-[#E4B88A] rounded-full animate-soundbar-2 origin-bottom" />
+                      <span className="w-0.5 h-full bg-[#E4B88A] rounded-full animate-soundbar-3 origin-bottom" />
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <Volume2 className="w-4 h-4 text-[#E4B88A] shrink-0" />
+                    <span>{meta.listen}</span>
+                  </>
+                )}
+              </button>
+            </div>
           </div>
         </div>
 

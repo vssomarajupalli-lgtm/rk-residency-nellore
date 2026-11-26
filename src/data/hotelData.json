@@ -1,11 +1,11 @@
 {
   "hotel": {
     "name": "RK Residency",
-    "tagline": "5-Floor Hotel, Nellore",
-    "taglineTe": "5-అంతస్తుల హోటల్, నెల్లూరు",
-    "taglineHi": "5-मंजिला होटल, नेल्लोर",
+    "tagline": "5-Floor Hotel, Nellore, AP",
+    "taglineTe": "5-అంతస్తుల హోటల్, నెల్లూరు, AP",
+    "taglineHi": "5-मंजिला होटल, नेल्लोर, AP",
     "floors": 5,
-    "address": "No. 38, Opp. Parthasaradhi Arch, Near Narayana Medical College, Muthukur Road, Nellore – 524003, Andhra Pradesh",
+    "address": "No. 38, Opp. Parthasaradhi Arch, Near Narayana Medical College, Muthukur Road, Nellore, Andhra Pradesh - 524003",
     "addressTe": "నం. 38, పార్థసారథి ఆర్చ్ ఎదురుగా, నారాయణ మెడికల్ కాలేజ్ దగ్గర, ముత్తుకూరు రోడ్, నెల్లూరు – 524003, ఆంధ్రప్రదేశ్",
     "addressHi": "नं. 38, पार्थसारथी आर्च के सामने, नारायणा मेडिकल कॉलेज के पास, मुथुकुर रोड, नेल्लोर – 524003, आंध्र प्रदेश",
     "mapPinQuery": "C2F4+FQ4, Opp Parthasaradhi Arch, Near Narayana Medical College, Muthukur Road, Nellore, Andhra Pradesh 524003",

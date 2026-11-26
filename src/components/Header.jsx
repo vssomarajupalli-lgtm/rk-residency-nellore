@@ -40,13 +40,13 @@ export default function Header({ lang, setLang, t }) {
           </span>
         </a>
 
-        {/* Desktop Nav — Clean & Flat */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-6 text-[15px] font-semibold text-[#3B2A1A]">
+        {/* Desktop Nav — Unified 3D Pill Capsule */}
+        <nav className="hidden lg:flex items-center gap-0.5 bg-white/80 border border-[#C89D54]/45 rounded-full px-2.5 py-1.5 shadow-[0_3px_10px_rgba(43,28,16,0.08),inset_0_1px_0_rgba(255,255,255,0.9)]">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="hover:text-[#9C6F34] transition-colors whitespace-nowrap"
+              className="text-[15.5px] lg:text-[16px] font-semibold text-[#3B2A1A] px-2.5 xl:px-3 py-1 rounded-full whitespace-nowrap transition-all duration-200 hover:bg-[#7A5B36] hover:text-[#FFF8EB] hover:shadow-sm"
             >
               {item.label}
             </a>
