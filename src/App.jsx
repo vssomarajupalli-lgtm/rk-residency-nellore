@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { translations } from './data/translations'
+import hotelData from './data/hotelData.json'
 import TopTicker from './components/TopTicker'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -31,6 +32,26 @@ export default function App() {
       <footer className="bg-[#221E1B] text-[#D8CEC2] py-8 px-4 text-center text-xs sm:text-sm">
         <p className="font-medium text-white">© {new Date().getFullYear()} {t.footer.rights}</p>
         <p className="mt-1.5 text-[#B5AAA0]">{t.footer.directOnly}</p>
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[#E4B88A] font-medium">
+          {hotelData.hotel.email && (
+            <a
+              href={`mailto:${hotelData.hotel.email}`}
+              className="hover:text-white hover:underline transition-colors"
+            >
+              {hotelData.hotel.email}
+            </a>
+          )}
+          {hotelData.featureFlags.instagramUrl && (
+            <a
+              href={hotelData.featureFlags.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white hover:underline transition-colors"
+            >
+              Instagram: {hotelData.featureFlags.instagramHandle || '@rkresidencynlr09'}
+            </a>
+          )}
+        </div>
       </footer>
       <MobileStickyBar t={t} />
     </div>

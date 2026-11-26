@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import { ChevronDown, MapPin, Phone, Wallet, ExternalLink, Instagram, Facebook } from 'lucide-react'
+import { ChevronDown, MapPin, Phone, Mail, Wallet, ExternalLink, Instagram, Facebook } from 'lucide-react'
 import hotelData from '../data/hotelData.json'
 import useRevealOnScroll from '../hooks/useRevealOnScroll'
 import { assetUrl } from '../utils/assetUrl'
 
 export default function FaqAndLocationSection({ lang, t }) {
   const [openIdx, setOpenIdx] = useState(0)
-  const { address, addressTe, mapPinQuery, phoneLinks } = hotelData.hotel
-  const { upiQrEnabled, upiQrImage, instagramUrl, facebookUrl } = hotelData.featureFlags
+  const { address, addressTe, mapPinQuery, phoneLinks, email } = hotelData.hotel
+  const { upiQrEnabled, upiQrImage, instagramUrl, instagramHandle, facebookUrl } = hotelData.featureFlags
   const ref = useRevealOnScroll()
 
   const encodedQuery = encodeURIComponent(mapPinQuery)
@@ -117,6 +117,24 @@ export default function FaqAndLocationSection({ lang, t }) {
                   </div>
                 </div>
 
+                {email && (
+                  <div className="pt-5 border-t border-[#EFEAE2]">
+                    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#7C5C3E] mb-2.5">
+                      <Mail className="w-4 h-4" />
+                      <span>{t.location.emailLabel}</span>
+                    </div>
+                    <a
+                      href={`mailto:${email}`}
+                      className="inline-flex items-center gap-2.5 text-base sm:text-lg font-bold text-[#221E1B] hover:text-[#7C5C3E] transition-colors break-all"
+                    >
+                      <span className="w-9 h-9 rounded-full bg-[#FAF8F5] border border-[#DDD4C8] flex items-center justify-center text-[#7C5C3E] shrink-0">
+                        <Mail className="w-4 h-4" />
+                      </span>
+                      <span>{email}</span>
+                    </a>
+                  </div>
+                )}
+
                 <div className="pt-5 border-t border-[#EFEAE2]">
                   <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#7C5C3E] mb-2.5">
                     <Wallet className="w-4 h-4" />
@@ -146,10 +164,11 @@ export default function FaqAndLocationSection({ lang, t }) {
                       href={instagramUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label="Instagram"
-                      className="p-2 rounded-full bg-[#FAF8F5] border border-[#DDD4C8] text-[#7C5C3E] hover:bg-[#7C5C3E] hover:text-white transition-colors"
+                      aria-label={`Instagram ${instagramHandle || ''}`}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FAF8F5] border border-[#DDD4C8] text-[#7C5C3E] hover:bg-[#7C5C3E] hover:text-white text-xs sm:text-sm font-semibold transition-colors"
                     >
-                      <Instagram className="w-4 h-4" />
+                      <Instagram className="w-4 h-4 shrink-0" />
+                      <span>{instagramHandle || '@rkresidencynlr09'}</span>
                     </a>
                   ) : (
                     <span

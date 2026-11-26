@@ -11,6 +11,7 @@
       "+91 90000 03253",
       "+91 90000 07231"
     ],
+    "email": "rkresidencynlr@gmail.com",
     "phoneLinks": [
       {
         "display": "+91 90000 03253",
@@ -36,7 +37,8 @@
     "heroVideoUrl": "videos/hero-tour.mp4",
     "upiQrEnabled": false,
     "upiQrImage": "",
-    "instagramUrl": "",
+    "instagramUrl": "https://www.instagram.com/rkresidencynlr09/",
+    "instagramHandle": "@rkresidencynlr09",
     "facebookUrl": "",
     "otaPartners": []
   },
