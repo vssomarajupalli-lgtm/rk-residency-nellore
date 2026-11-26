@@ -27,7 +27,7 @@ export default function Header({ lang, setLang, t }) {
             RK
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="font-serif-display text-2xl md:text-3xl font-bold tracking-tight animate-gold-shimmer [text-shadow:0_1px_0_#FFF8E7,0_2px_0_#C89D54,0_4px_10px_rgba(45,33,24,0.28)] whitespace-nowrap">
+            <span className="font-serif-display text-2xl md:text-3xl font-bold tracking-tight text-[#2B1C10] [text-shadow:0_1px_0_#D8B26E,0_2px_0_#9B7036,0_4px_8px_rgba(43,28,16,0.22)] whitespace-nowrap">
               {hotelData.hotel.name}
             </span>
             <span className="text-[11px] uppercase tracking-[0.18em] text-[#7A5B36] font-semibold whitespace-nowrap">
