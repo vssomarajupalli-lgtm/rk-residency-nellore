@@ -8,12 +8,12 @@ function RoomCard({ room, lang, t, delay }) {
   const [selectedImg, setSelectedImg] = useState(0)
   const [p1, p2] = hotelData.hotel.phoneLinks
 
-  const name = lang === 'te' ? room.nameTe : room.nameEn
-  const tariff = lang === 'te' ? room.tariffTe : room.tariffEn
-  const dimensions = lang === 'te' ? room.dimensionsTe : room.dimensions
-  const bedType = lang === 'te' ? room.bedTypeTe : room.bedTypeEn
-  const desc = lang === 'te' ? room.descTe : room.descEn
-  const highlights = lang === 'te' ? room.highlightsTe : room.highlightsEn
+  const name = lang === 'te' ? room.nameTe : lang === 'hi' ? room.nameHi : room.nameEn
+  const tariff = lang === 'te' ? room.tariffTe : lang === 'hi' ? room.tariffHi : room.tariffEn
+  const dimensions = lang === 'te' ? room.dimensionsTe : lang === 'hi' ? room.dimensionsHi : room.dimensions
+  const bedType = lang === 'te' ? room.bedTypeTe : lang === 'hi' ? room.bedTypeHi : room.bedTypeEn
+  const desc = lang === 'te' ? room.descTe : lang === 'hi' ? room.descHi : room.descEn
+  const highlights = lang === 'te' ? room.highlightsTe : lang === 'hi' ? room.highlightsHi : room.highlightsEn
 
   return (
     <div

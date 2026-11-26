@@ -104,7 +104,7 @@ export default function GallerySection({ lang, t }) {
         {/* Photo Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-5">
           {filtered.map((item, idx) => {
-            const title = lang === 'te' ? item.titleTe : item.titleEn
+            const title = lang === 'te' ? item.titleTe : lang === 'hi' ? item.titleHi : item.titleEn
             return (
               <button
                 key={item.id}
@@ -139,7 +139,7 @@ export default function GallerySection({ lang, t }) {
           {/* Top Bar */}
           <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 text-white border-b border-white/10">
             <div className="text-sm sm:text-base font-semibold truncate pr-4">
-              {lang === 'te' ? activePhoto.titleTe : activePhoto.titleEn}
+              {lang === 'te' ? activePhoto.titleTe : lang === 'hi' ? activePhoto.titleHi : activePhoto.titleEn}
               <span className="ml-2 text-xs text-white/60">
                 ({lightboxIdx + 1} / {filtered.length})
               </span>
@@ -189,7 +189,7 @@ export default function GallerySection({ lang, t }) {
 
             <img
               src={assetUrl(activePhoto.src)}
-              alt={lang === 'te' ? activePhoto.titleTe : activePhoto.titleEn}
+              alt={lang === 'te' ? activePhoto.titleTe : lang === 'hi' ? activePhoto.titleHi : activePhoto.titleEn}
               style={{ transform: `scale(${zoom})` }}
               className="max-h-[80vh] max-w-full object-contain rounded-lg transition-transform duration-200 select-none"
             />

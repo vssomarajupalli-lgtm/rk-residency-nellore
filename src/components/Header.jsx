@@ -24,7 +24,11 @@ export default function Header({ lang, setLang, t }) {
             {hotelData.hotel.name}
           </span>
           <span className="text-[11px] uppercase tracking-[0.16em] text-[#7A6F66] font-medium">
-            {lang === 'te' ? hotelData.hotel.taglineTe : hotelData.hotel.tagline}
+            {lang === 'te'
+              ? hotelData.hotel.taglineTe
+              : lang === 'hi'
+                ? hotelData.hotel.taglineHi
+                : hotelData.hotel.tagline}
           </span>
         </a>
 
@@ -44,14 +48,14 @@ export default function Header({ lang, setLang, t }) {
         {/* Actions: Language Toggle + Call Button */}
         <div className="flex items-center gap-2 sm:gap-3 shrink-0 relative z-10">
           <div
-            className="inline-flex items-center rounded-full border border-[#DDD4C8] bg-white p-0.5 text-xs sm:text-sm font-semibold shrink-0 touch-manipulation"
+            className="inline-flex items-center rounded-full border border-[#DDD4C8] bg-white p-0.5 text-[11px] sm:text-sm font-semibold shrink-0 touch-manipulation"
             role="group"
             aria-label="Language switcher"
           >
             <button
               type="button"
               onClick={() => setLang('en')}
-              className={`px-3 py-1.5 rounded-full transition-colors cursor-pointer whitespace-nowrap touch-manipulation ${
+              className={`px-2 sm:px-3 py-1.5 rounded-full transition-colors cursor-pointer whitespace-nowrap touch-manipulation ${
                 lang === 'en'
                   ? 'bg-[#7C5C3E] text-white'
                   : 'text-[#5C534B] hover:text-[#221E1B]'
@@ -62,13 +66,24 @@ export default function Header({ lang, setLang, t }) {
             <button
               type="button"
               onClick={() => setLang('te')}
-              className={`px-3 py-1.5 rounded-full transition-colors cursor-pointer whitespace-nowrap touch-manipulation ${
+              className={`px-2 sm:px-3 py-1.5 rounded-full transition-colors cursor-pointer whitespace-nowrap touch-manipulation ${
                 lang === 'te'
                   ? 'bg-[#7C5C3E] text-white'
                   : 'text-[#5C534B] hover:text-[#221E1B]'
               }`}
             >
               తెలుగు
+            </button>
+            <button
+              type="button"
+              onClick={() => setLang('hi')}
+              className={`px-2 sm:px-3 py-1.5 rounded-full transition-colors cursor-pointer whitespace-nowrap touch-manipulation ${
+                lang === 'hi'
+                  ? 'bg-[#7C5C3E] text-white'
+                  : 'text-[#5C534B] hover:text-[#221E1B]'
+              }`}
+            >
+              हिंदी
             </button>
           </div>
 

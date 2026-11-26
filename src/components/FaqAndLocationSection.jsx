@@ -6,7 +6,7 @@ import { assetUrl } from '../utils/assetUrl'
 
 export default function FaqAndLocationSection({ lang, t }) {
   const [openIdx, setOpenIdx] = useState(0)
-  const { address, addressTe, mapPinQuery, phoneLinks, email } = hotelData.hotel
+  const { address, addressTe, addressHi, mapPinQuery, phoneLinks, email } = hotelData.hotel
   const { upiQrEnabled, upiQrImage, instagramUrl, instagramHandle, facebookUrl } = hotelData.featureFlags
   const ref = useRevealOnScroll()
 
@@ -83,7 +83,7 @@ export default function FaqAndLocationSection({ lang, t }) {
                     <span>{t.location.addressLabel}</span>
                   </div>
                   <p className="text-base font-medium text-[#2c2219] leading-relaxed">
-                    {lang === 'te' ? addressTe : address}
+                    {lang === 'te' ? addressTe : lang === 'hi' ? addressHi : address}
                   </p>
                   <a
                     href={mapsLink}

@@ -3,9 +3,11 @@
     "name": "RK Residency",
     "tagline": "5-Floor Hotel, Nellore",
     "taglineTe": "5-అంతస్తుల హోటల్, నెల్లూరు",
+    "taglineHi": "5-मंजिला होटल, नेल्लोर",
     "floors": 5,
     "address": "No. 38, Opp. Parthasaradhi Arch, Near Narayana Medical College, Muthukur Road, Nellore – 524003, Andhra Pradesh",
     "addressTe": "నం. 38, పార్థసారథి ఆర్చ్ ఎదురుగా, నారాయణ మెడికల్ కాలేజ్ దగ్గర, ముత్తుకూరు రోడ్, నెల్లూరు – 524003, ఆంధ్రప్రదేశ్",
+    "addressHi": "नं. 38, पार्थसारथी आर्च के सामने, नारायणा मेडिकल कॉलेज के पास, मुथुकुर रोड, नेल्लोर – 524003, आंध्र प्रदेश",
     "mapPinQuery": "C2F4+FQ4, Opp Parthasaradhi Arch, Near Narayana Medical College, Muthukur Road, Nellore, Andhra Pradesh 524003",
     "phones": [
       "+91 90000 03253",
@@ -65,15 +67,20 @@
       "id": "ac-double",
       "nameEn": "AC Double Bedroom",
       "nameTe": "ఏసీ డబుల్ బెడ్‌రూమ్",
+      "nameHi": "एसी डबल बेडरूम",
       "tariffEn": "₹1,250 / 24 hrs (Day & Night) — Direct Call",
       "tariffTe": "₹1,250 / 24 గంటలకు (డే & నైట్) — డైరెక్ట్ కాల్",
+      "tariffHi": "₹1,250 / 24 घंटे (दिन और रात) — डायरेक्ट कॉल",
       "priceNumeric": 1250,
       "dimensions": "11'0\" × 11'0\" / 10'0\" × 11'0\" (Attached Bathroom: 4'6\" × 7'0\")",
       "dimensionsTe": "11'0\" × 11'0\" / 10'0\" × 11'0\" (అటాచ్డ్ బాత్రూమ్: 4'6\" × 7'0\")",
+      "dimensionsHi": "11'0\" × 11'0\" / 10'0\" × 11'0\" (अटैच्ड बाथरूम: 4'6\" × 7'0\")",
       "bedTypeEn": "Double Bed / Twin Bed Options",
       "bedTypeTe": "డబుల్ బెడ్ / ట్విన్ బెడ్ ఎంపికలు",
+      "bedTypeHi": "डबल बेड / ट्विन बेड विकल्प",
       "descEn": "Bright, airy rooms with split AC, wide windows, crisp linen, wardrobe, flat-screen TV, high-speed Wi-Fi, intercom, and attached western bathroom with hot water geyser.",
       "descTe": "స్ప్లిట్ ఏసీ, విశాలమైన కిటికీలు, శుభ్రమైన బెడ్‌షీట్లు, వార్డ్‌రోబ్, టీవీ, హై-స్పీడ్ వై-ఫై, ఇంటర్‌కామ్ మరియు గీజర్‌తో కూడిన అటాచ్డ్ వెస్ట్రన్ బాత్రూమ్ సౌకర్యంతో విశాలమైన గదులు.",
+      "descHi": "स्प्लिट एसी, चौड़ी खिड़कियों, साफ लिनन, अलमारी, फ्लैट-स्क्रीन टीवी, हाई-स्पीड वाई-फाई, इंटरकॉम और गीज़र के साथ अटैच्ड वेस्टर्न बाथरूम वाले हवादार और विशाल कमरे।",
       "images": [
         "images/ac-double-room-front.webp",
         "images/ac-double-room-tv.webp",
@@ -91,21 +98,32 @@
         "పూర్తి ప్రైవసీ & ప్రశాంత వాతావరణం",
         "స్ప్లిట్ ఏసీ & గీజర్ బాత్రూమ్",
         "టీవీ, ఉచిత వై-ఫై & 24/7 పవర్ బ్యాకప్"
+      ],
+      "highlightsHi": [
+        "कपल-फ्रेंडली (वैध सरकारी ID)",
+        "पूरी प्राइवेसी और शांत वातावरण",
+        "स्प्लिट एसी और गीज़र बाथरूम",
+        "टीवी, मुफ्त वाई-फाई और 24/7 पावर बैकअप"
       ]
     },
     {
       "id": "ac-single",
       "nameEn": "AC Single Bedroom",
       "nameTe": "ఏసీ సింగిల్ బెడ్‌రూమ్",
+      "nameHi": "एसी सिंगल बेडरूम",
       "tariffEn": "₹900 / 24 hrs (Day & Night) — Direct Call",
       "tariffTe": "₹900 / 24 గంటలకు (డే & నైట్) — డైరెక్ట్ కాల్",
+      "tariffHi": "₹900 / 24 घंटे (दिन और रात) — डायरेक्ट कॉल",
       "priceNumeric": 900,
       "dimensions": "8'0\" × 10'1.5\" (Attached Bathroom: 4'1.5\" × 5'0\")",
       "dimensionsTe": "8'0\" × 10'1.5\" (అటాచ్డ్ బాత్రూమ్: 4'1.5\" × 5'0\")",
+      "dimensionsHi": "8'0\" × 10'1.5\" (अटैच्ड बाथरूम: 4'1.5\" × 5'0\")",
       "bedTypeEn": "Single Bed",
       "bedTypeTe": "సింగిల్ బెడ్",
+      "bedTypeHi": "सिंगल बेड",
       "descEn": "Cozy, well-ventilated solo stay room equipped with split AC, flat-screen TV, bedside table, intercom phone, Wi-Fi, and attached western bathroom with geyser.",
       "descTe": "సోలో ప్రయాణికులు, విద్యార్థులు మరియు బిజినెస్ అతిథుల కోసం స్ప్లిట్ ఏసీ, టీవీ, సైడ్ టేబుల్, ఇంటర్‌కామ్, వై-ఫై మరియు గీజర్‌తో కూడిన అటాచ్డ్ వెస్ట్రన్ బాత్రూమ్ గల సౌకర్యవంతమైన గది.",
+      "descHi": "सोलो यात्रियों, छात्रों और बिज़नेस मेहमानों के लिए स्प्लिट एसी, टीवी, साइड टेबल, इंटरकॉम, वाई-फाई और गीज़र के साथ अटैच्ड वेस्टर्न बाथरूम वाला आरामदायक कमरा।",
       "images": [
         "images/ac-single-room.webp",
         "images/attached-bathroom.webp"
@@ -121,6 +139,12 @@
         "నిశ్శబ్ద & ప్రశాంత బస",
         "స్ప్లిట్ ఏసీ & గీజర్ బాత్రూమ్",
         "టీవీ, ఉచిత వై-ఫై & లిఫ్ట్ సౌకర్యం"
+      ],
+      "highlightsHi": [
+        "पूरी प्राइवेसी और शांत वातावरण",
+        "शोर-मुक्त और सुकून भरा स्टे",
+        "स्प्लिट एसी और गीज़र बाथरूम",
+        "टीवी, मुफ्त वाई-फाई और लिफ्ट सुविधा"
       ]
     }
   ],
@@ -130,112 +154,128 @@
       "src": "images/exterior-building.webp",
       "category": "exterior",
       "titleEn": "5-Floor Hotel Building",
-      "titleTe": "5-అంతస్తుల హోటల్ భవనం"
+      "titleTe": "5-అంతస్తుల హోటల్ భవనం",
+      "titleHi": "5-मंजिला होटल भवन"
     },
     {
       "id": 2,
       "src": "images/hotel-entrance.webp",
       "category": "exterior",
       "titleEn": "Main Ground Floor Entrance",
-      "titleTe": "ప్రధాన ప్రవేశ ద్వారం"
+      "titleTe": "ప్రధాన ప్రవేశ ద్వారం",
+      "titleHi": "मुख्य प्रवेश द्वार"
     },
     {
       "id": 3,
       "src": "images/indoor-parking.webp",
       "category": "exterior",
       "titleEn": "Covered Indoor Stilt Parking",
-      "titleTe": "కవర్డ్ ఇండోర్ పార్కింగ్"
+      "titleTe": "కవర్డ్ ఇండోర్ పార్కింగ్",
+      "titleHi": "कवर्ड इनडोर पार्किंग"
     },
     {
       "id": 4,
       "src": "images/outdoor-parking.webp",
       "category": "exterior",
       "titleEn": "Outdoor Parking & Approach Road",
-      "titleTe": "అవుట్‌డోర్ పార్కింగ్ & రోడ్"
+      "titleTe": "అవుట్‌డోర్ పార్కింగ్ & రోడ్",
+      "titleHi": "आउटडोर पार्किंग और मुख्य मार्ग"
     },
     {
       "id": 5,
       "src": "images/reception-lobby.webp",
       "category": "common",
       "titleEn": "24/7 Reception Lobby",
-      "titleTe": "24/7 రిసెప్షన్ లాబీ"
+      "titleTe": "24/7 రిసెప్షన్ లాబీ",
+      "titleHi": "24/7 रिसेप्शन लॉबी"
     },
     {
       "id": 6,
       "src": "images/reception-desk-evening.webp",
       "category": "common",
       "titleEn": "Reception Front Desk",
-      "titleTe": "రిసెప్షన్ ఫ్రంట్ డెస్క్"
+      "titleTe": "రిసెప్షన్ ఫ్రంట్ డెస్క్",
+      "titleHi": "रिसेप्शन फ्रंट डेस्क"
     },
     {
       "id": 7,
       "src": "images/floor-corridor.webp",
       "category": "common",
       "titleEn": "7-Foot Wide Floor Corridor",
-      "titleTe": "7-అడుగుల వెడల్పు కారిడార్"
+      "titleTe": "7-అడుగుల వెడల్పు కారిడార్",
+      "titleHi": "7-फीट चौड़ा कॉरिडोर"
     },
     {
       "id": 8,
       "src": "images/elevator-access.webp",
       "category": "common",
       "titleEn": "Elevator Access to All 5 Floors",
-      "titleTe": "అన్ని 5 అంతస్తులకు లిఫ్ట్ సౌకర్యం"
+      "titleTe": "అన్ని 5 అంతస్తులకు లిఫ్ట్ సౌకర్యం",
+      "titleHi": "सभी 5 मंजिलों तक लिफ्ट सुविधा"
     },
     {
       "id": 9,
       "src": "images/elevator-closeup.webp",
       "category": "common",
       "titleEn": "Passenger Lift Cabin",
-      "titleTe": "ప్యాసింజర్ లిఫ్ట్"
+      "titleTe": "ప్యాసింజర్ లిఫ్ట్",
+      "titleHi": "पैसेंजर लिफ्ट केबिन"
     },
     {
       "id": 10,
       "src": "images/ac-double-room-front.webp",
       "category": "double",
       "titleEn": "AC Double Bedroom — Front View",
-      "titleTe": "ఏసీ డబుల్ బెడ్‌రూమ్ — ఫ్రంట్ వ్యూ"
+      "titleTe": "ఏసీ డబుల్ బెడ్‌రూమ్ — ఫ్రంట్ వ్యూ",
+      "titleHi": "एसी डबल बेडरूम — फ्रंट व्यू"
     },
     {
       "id": 11,
       "src": "images/ac-double-room-tv.webp",
       "category": "double",
       "titleEn": "AC Double Bedroom with TV & Views",
-      "titleTe": "టీవీ & కిటికీలతో ఏసీ డబుల్ బెడ్‌రూమ్"
+      "titleTe": "టీవీ & కిటికీలతో ఏసీ డబుల్ బెడ్‌రూమ్",
+      "titleHi": "टीवी और खिड़कियों वाला एसी डबल बेडरूम"
     },
     {
       "id": 12,
       "src": "images/ac-double-room-suite.webp",
       "category": "double",
       "titleEn": "AC Double Bedroom with Wardrobe",
-      "titleTe": "వార్డ్‌రోబ్‌తో ఏసీ డబుల్ బెడ్‌రూమ్"
+      "titleTe": "వార్డ్‌రోబ్‌తో ఏసీ డబుల్ బెడ్‌రూమ్",
+      "titleHi": "अलमारी के साथ एसी डबल बेडरूम"
     },
     {
       "id": 13,
       "src": "images/ac-twin-room-front.webp",
       "category": "double",
       "titleEn": "AC Twin-Bed Double Room",
-      "titleTe": "ఏసీ ట్విన్-బెడ్ డబుల్ రూమ్"
+      "titleTe": "ఏసీ ట్విన్-బెడ్ డబుల్ రూమ్",
+      "titleHi": "एसी ट्विन-बेड डबल रूम"
     },
     {
       "id": 14,
       "src": "images/ac-twin-room-angle.webp",
       "category": "double",
       "titleEn": "AC Twin-Bed Room — Side View",
-      "titleTe": "ఏసీ ట్విన్-బెడ్ రూమ్ — సైడ్ వ్యూ"
+      "titleTe": "ఏసీ ట్విన్-బెడ్ రూమ్ — సైడ్ వ్యూ",
+      "titleHi": "एसी ट्विन-बेड रूम — साइड व्यू"
     },
     {
       "id": 15,
       "src": "images/ac-single-room.webp",
       "category": "single",
       "titleEn": "AC Single Bedroom",
-      "titleTe": "ఏసీ సింగిల్ బెడ్‌రూమ్"
+      "titleTe": "ఏసీ సింగిల్ బెడ్‌రూమ్",
+      "titleHi": "एसी सिंगल बेडरूम"
     },
     {
       "id": 16,
       "src": "images/attached-bathroom.webp",
       "category": "bathroom",
       "titleEn": "Attached Western Bathroom with Geyser",
-      "titleTe": "గీజర్‌తో అటాచ్డ్ వెస్ట్రన్ బాత్రూమ్"
+      "titleTe": "గీజర్‌తో అటాచ్డ్ వెస్ట్రన్ బాత్రూమ్",
+      "titleHi": "गीज़र के साथ अटैच्ड वेस्टर्न बाथरूम"
     }
   ]
 }
