@@ -98,8 +98,8 @@ export default function Hero({ lang = 'en', t }) {
         </div>
       )}
 
-      {/* Smooth Bottom-Edge Gradient Fade Only (lower ~40%) */}
-      <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-black/80 via-black/35 to-transparent pointer-events-none" />
+      {/* Smooth Bottom-Half Gradient Fade Only (top 50% stays 100% bright & clear) */}
+      <div className="absolute inset-x-0 bottom-0 h-[50%] bg-gradient-to-t from-black/90 via-black/55 to-transparent pointer-events-none" />
 
       {/* Zero-Box Horizontal Bottom Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-8 sm:pb-10">
@@ -111,11 +111,11 @@ export default function Hero({ lang = 'en', t }) {
               <span>{t.hero.badge}</span>
             </div>
 
-            <h1 className="font-serif-display text-3xl sm:text-5xl lg:text-[3.35rem] font-bold text-white leading-[1.08] tracking-tight mb-2.5 hero-text-shadow">
+            <h1 className="font-serif-display text-3xl sm:text-5xl lg:text-[3.35rem] font-bold text-[#FFF3D1] leading-[1.08] tracking-tight mb-2.5 [text-shadow:0_3px_14px_rgba(0,0,0,0.95)]">
               {t.hero.headline}
             </h1>
 
-            <p className="text-sm sm:text-base lg:text-lg text-[#F5EFE6] leading-snug font-medium hero-text-shadow">
+            <p className="text-sm sm:text-base lg:text-lg text-[#F7EFE2] leading-snug font-medium [text-shadow:0_3px_14px_rgba(0,0,0,0.95)]">
               {t.hero.subheadline}
             </p>
 
