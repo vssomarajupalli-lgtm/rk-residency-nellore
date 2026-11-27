@@ -66,13 +66,13 @@ export default function GallerySection({ lang, t }) {
   const activePhoto = lightboxIdx !== null ? filtered[lightboxIdx] : null
 
   return (
-    <section id="gallery" className="py-16 sm:py-24 bg-[#F3EFE8] border-y border-[#E6DFD5]" ref={ref}>
+    <section id="gallery" className="py-16 sm:py-24 bg-[#FFFDF8]" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-8 reveal-on-scroll">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7C5C3E] mb-2">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9A6728] mb-2">
             {t.gallery.eyebrow}
           </p>
-          <h2 className="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#221E1B] leading-tight">
+          <h2 className="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2B1A0E] leading-tight">
             {t.gallery.title}
           </h2>
           <p className="mt-3 text-base font-medium text-[#2c2219] leading-relaxed">
@@ -92,8 +92,8 @@ export default function GallerySection({ lang, t }) {
               }}
               className={`px-4 py-2 rounded-full text-sm font-semibold transition-all cursor-pointer ${
                 activeCategory === cat.id
-                  ? 'bg-[#7C5C3E] text-white shadow-sm'
-                  : 'bg-white text-[#4F4740] border border-[#DDD4C8] hover:border-[#7C5C3E]'
+                  ? 'bg-[#7A5529] text-[#FFF8EB] shadow-sm'
+                  : 'bg-[#F6EFE4] text-[#3B2A1A] border border-[#DECBB0] hover:border-[#7A5529]'
               }`}
             >
               {cat.label}

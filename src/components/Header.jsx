@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { Phone, Menu, X } from 'lucide-react'
+import { Phone, Menu, X, ChevronDown } from 'lucide-react'
 import hotelData from '../data/hotelData.json'
 
 export default function Header({ lang, setLang, t }) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeHref, setActiveHref] = useState('#rooms')
   const primaryPhone = hotelData.hotel.phoneLinks[0]
 
   const navItems = [
@@ -41,16 +42,29 @@ export default function Header({ lang, setLang, t }) {
         </a>
 
         {/* Desktop Nav — Unified 3D Pill Capsule */}
-        <nav className="hidden lg:flex items-center gap-0.5 bg-white/80 border border-[#C89D54]/45 rounded-full px-2.5 py-1.5 shadow-[0_3px_10px_rgba(43,28,16,0.08),inset_0_1px_0_rgba(255,255,255,0.9)]">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-[15.5px] lg:text-[16px] font-semibold text-[#3B2A1A] px-2.5 xl:px-3 py-1 rounded-full whitespace-nowrap transition-all duration-200 hover:bg-[#7A5B36] hover:text-[#FFF8EB] hover:shadow-sm"
-            >
-              {item.label}
-            </a>
-          ))}
+        <nav className="hidden lg:flex items-center gap-0.5 bg-white/85 border border-[#C89D54]/50 rounded-full px-2 py-1.5 shadow-[0_3px_10px_rgba(43,28,16,0.08),inset_0_1px_0_rgba(255,255,255,0.9)]">
+          {navItems.map((item) => {
+            const isActive = activeHref === item.href
+            return (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setActiveHref(item.href)}
+                className={`inline-flex items-center gap-1 text-[14.5px] xl:text-[15.5px] font-semibold px-2.5 xl:px-3 py-1 rounded-full whitespace-nowrap transition-all duration-200 ${
+                  isActive
+                    ? 'bg-[#7A5529] text-[#FFF8EB] shadow-sm'
+                    : 'text-[#3B2A1A] hover:bg-[#7A5529]/12 hover:text-[#7A5529]'
+                }`}
+              >
+                <span>{item.label}</span>
+                <ChevronDown
+                  className={`w-3.5 h-3.5 shrink-0 ${
+                    isActive ? 'text-[#F2D194]' : 'text-[#9A6728]'
+                  }`}
+                />
+              </a>
+            )
+          })}
         </nav>
 
         {/* Actions: Language Toggle + Call Button */}

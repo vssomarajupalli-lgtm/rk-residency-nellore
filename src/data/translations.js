@@ -16,7 +16,7 @@ export const translations = {
       amenities: 'Amenities',
       gallery: 'Gallery',
       faq: 'Policies & FAQ',
-      location: 'Location',
+      location: 'Contact',
       callToBook: 'Call to Book',
     },
     hero: {
@@ -201,7 +201,7 @@ export const translations = {
       amenities: 'సౌకర్యాలు',
       gallery: 'గ్యాలరీ',
       faq: 'నియమాలు & ప్రశ్నలు',
-      location: 'చిరునామా',
+      location: 'సంప్రదించండి',
       callToBook: 'బుకింగ్ కోసం కాల్',
     },
     hero: {
@@ -386,7 +386,7 @@ export const translations = {
       amenities: 'सुविधाएं',
       gallery: 'गैलरी',
       faq: 'नियम और प्रश्न',
-      location: 'पता',
+      location: 'संपर्क',
       callToBook: 'बुक करने के लिए कॉल करें',
     },
     hero: {

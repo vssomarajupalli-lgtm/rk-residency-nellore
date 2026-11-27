@@ -7,13 +7,13 @@ export default function IdealStaySection({ t }) {
   const ref = useRevealOnScroll()
 
   return (
-    <section id="ideal-stay" className="py-16 sm:py-24 bg-[#F3EFE8] border-y border-[#E6DFD5]" ref={ref}>
+    <section id="ideal-stay" className="py-16 sm:py-24 bg-[#FFFDF8] border-y border-[#E6D7C3]" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-10 sm:mb-14 reveal-on-scroll">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7C5C3E] mb-2">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9A6728] mb-2">
             {t.idealStay.eyebrow}
           </p>
-          <h2 className="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#221E1B] leading-tight">
+          <h2 className="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2B1A0E] leading-tight">
             {t.idealStay.title}
           </h2>
           <p className="mt-3 text-base font-medium text-[#2c2219] leading-relaxed">
@@ -27,13 +27,13 @@ export default function IdealStaySection({ t }) {
             return (
               <div
                 key={card.title}
-                className="reveal-on-scroll h-full bg-white rounded-2xl border border-[#E6DFD5] border-t-4 border-t-[#9c7a4c] p-6 shadow-[0_10px_28px_rgba(60,40,20,0.07)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(60,40,20,0.14)] transition-all duration-300 flex flex-col"
+                className="reveal-on-scroll h-full bg-[#FAF3E8] rounded-2xl border border-[#E2D3BC] border-t-4 border-t-[#C89D54] p-6 shadow-[0_10px_28px_rgba(60,40,20,0.07)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(60,40,20,0.14)] transition-all duration-300 flex flex-col"
                 style={{ animationDelay: `${idx * 90}ms` }}
               >
-                <div className="w-11 h-11 rounded-xl bg-[#FAF8F5] border border-[#E2D9CE] flex items-center justify-center text-[#7C5C3E] mb-4">
+                <div className="w-11 h-11 rounded-full bg-[#F3E2C6] text-[#8A5A1E] flex items-center justify-center mb-4">
                   <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-serif-display text-[23px] xl:text-[25px] font-bold text-[#221E1B] mb-2.5 whitespace-nowrap truncate">
+                <h3 className="font-serif-display text-[23px] xl:text-[25px] font-bold text-[#2B1A0E] mb-2.5 whitespace-nowrap truncate">
                   {card.title}
                 </h3>
                 <p className="text-[15px] font-medium text-[#2c2219] leading-relaxed">
