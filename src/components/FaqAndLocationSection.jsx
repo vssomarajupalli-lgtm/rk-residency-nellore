@@ -34,7 +34,7 @@ export default function FaqAndLocationSection({ lang, t }) {
               return (
                 <div
                   key={item.q}
-                  className="reveal-on-scroll bg-[#FFFDF8] rounded-2xl border border-[#DFC9AA] border-l-4 border-l-[#C89D54] overflow-hidden shadow-xs"
+                  className="reveal-on-scroll bg-[#FCF7EE] rounded-2xl border border-[#C89D54]/40 border-l-4 border-l-[#C89D54] overflow-hidden shadow-xs"
                   style={{ animationDelay: `${idx * 70}ms` }}
                 >
                   <button
@@ -52,7 +52,7 @@ export default function FaqAndLocationSection({ lang, t }) {
                     />
                   </button>
                   {isOpen && (
-                    <div className="px-5 sm:px-6 pb-5 text-[15px] sm:text-base font-medium text-[#2c2219] leading-relaxed border-t border-[#F3E9DA] pt-3">
+                    <div className="px-5 sm:px-6 pb-5 text-[15px] sm:text-base font-medium text-[#2B1A0E]/90 leading-relaxed bg-[#F7EFE1]/70 border-t border-[#C89D54]/25 pt-3.5">
                       {item.a}
                     </div>
                   )}

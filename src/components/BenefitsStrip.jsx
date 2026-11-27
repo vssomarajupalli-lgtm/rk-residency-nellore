@@ -1,27 +1,31 @@
-import { BadgeIndianRupee, Car, Building2, Clock } from 'lucide-react'
+import { BadgeIndianRupee, ShieldCheck, Car, Building2 } from 'lucide-react'
 import useRevealOnScroll from '../hooks/useRevealOnScroll'
 
-const icons = [BadgeIndianRupee, Car, Building2, Clock]
+const icons = [BadgeIndianRupee, ShieldCheck, Car, Building2]
 
 export default function BenefitsStrip({ t }) {
   const ref = useRevealOnScroll()
 
   return (
-    <section className="bg-[#EFEAE2] border-y border-[#E2D9CE]" ref={ref}>
+    <section className="bg-[#EFE5D6] border-y border-[#DECBB0]" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {t.benefits.map((item, idx) => {
             const Icon = icons[idx] || BadgeIndianRupee
             return (
-              <div key={item.title} className="reveal-on-scroll flex items-start gap-3.5" style={{ animationDelay: `${idx * 90}ms` }}>
-                <div className="shrink-0 w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#DDD4C8] flex items-center justify-center text-[#7C5C3E]">
+              <div
+                key={item.title}
+                className="reveal-on-scroll bg-gradient-to-br from-[#FDF6EA] to-[#F5E7CE] border border-[#C89D54]/55 rounded-2xl p-4 shadow-sm animate-soft-glow flex items-start gap-3.5"
+                style={{ animationDelay: `${idx * 90}ms` }}
+              >
+                <div className="shrink-0 w-11 h-11 rounded-full bg-[#EED9B5] text-[#7A4F1D] flex items-center justify-center shadow-xs">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-sans text-base font-bold text-[#221E1B]">
+                  <h3 className="font-sans text-base font-bold text-[#2B1A0E]">
                     {item.title}
                   </h3>
-                  <p className="text-[15px] text-[#2c2219] font-medium mt-0.5 leading-snug">
+                  <p className="text-[14.5px] text-[#3B2A1A] font-medium mt-0.5 leading-snug">
                     {item.desc}
                   </p>
                 </div>

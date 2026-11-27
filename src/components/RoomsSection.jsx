@@ -17,7 +17,7 @@ function RoomCard({ room, lang, t, delay }) {
 
   return (
     <div
-      className="reveal-on-scroll bg-[#FFFDF8] rounded-2xl border border-[#E2D3BC] border-t-4 border-t-[#C89D54] overflow-hidden shadow-[0_10px_28px_rgba(60,40,20,0.09)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(60,40,20,0.16)] transition-all duration-300 flex flex-col"
+      className="reveal-on-scroll bg-[#FCF7EE] rounded-2xl border border-[#C89D54]/45 border-t-4 border-t-[#C89D54] overflow-hidden shadow-[0_10px_28px_rgba(60,40,20,0.09)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(60,40,20,0.16)] transition-all duration-300 flex flex-col"
       style={{ animationDelay: `${delay}ms` }}
     >
       {/* Main Image with smooth hover zoom */}
@@ -72,19 +72,21 @@ function RoomCard({ room, lang, t, delay }) {
           </span>
         </div>
 
-        <p className="text-[15px] sm:text-base font-medium text-[#2c2219] leading-relaxed mb-5">
-          {desc}
-        </p>
+        {/* Framed Warm-Champagne Inner Box for Description + Highlights */}
+        <div className="bg-[#FAF2E4] border border-[#C89D54]/35 rounded-xl p-4 mb-6">
+          <p className="text-[15px] sm:text-base font-medium text-[#2B1A0E] leading-relaxed mb-4">
+            {desc}
+          </p>
 
-        {/* Highlights */}
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">
-          {highlights.map((h) => (
-            <li key={h} className="flex items-center gap-2 text-[15px] font-medium text-[#2c2219]">
-              <Check className="w-4 h-4 text-[#1F6F54] shrink-0" />
-              <span>{h}</span>
-            </li>
-          ))}
-        </ul>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            {highlights.map((h) => (
+              <li key={h} className="flex items-center gap-2 text-[14.5px] font-medium text-[#2B1A0E]">
+                <Check className="w-4 h-4 text-[#1F6F54] shrink-0" />
+                <span>{h}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         {/* Call Buttons */}
         <div className="mt-auto pt-4 border-t border-[#EFEAE2] flex flex-wrap items-center gap-3">

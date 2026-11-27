@@ -1,7 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import { X, ZoomIn, ZoomOut, ChevronLeft, ChevronRight } from 'lucide-react'
 import hotelData from '../data/hotelData.json'
-import useRevealOnScroll from '../hooks/useRevealOnScroll'
 import { assetUrl } from '../utils/assetUrl'
 
 export default function GallerySection({ lang, t }) {
@@ -9,7 +8,6 @@ export default function GallerySection({ lang, t }) {
   const [lightboxIdx, setLightboxIdx] = useState(null)
   const [zoom, setZoom] = useState(1)
   const touchStartX = useRef(null)
-  const ref = useRevealOnScroll()
 
   const filtered =
     activeCategory === 'all'
@@ -66,9 +64,9 @@ export default function GallerySection({ lang, t }) {
   const activePhoto = lightboxIdx !== null ? filtered[lightboxIdx] : null
 
   return (
-    <section id="gallery" className="py-16 sm:py-24 bg-[#FFFDF8]" ref={ref}>
+    <section id="gallery" className="py-16 sm:py-24 bg-[#FCF7EE]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mb-8 reveal-on-scroll">
+        <div className="max-w-2xl mb-8">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9A6728] mb-2">
             {t.gallery.eyebrow}
           </p>
@@ -81,7 +79,7 @@ export default function GallerySection({ lang, t }) {
         </div>
 
         {/* Category Filter Tabs */}
-        <div className="flex flex-wrap gap-2 mb-8 reveal-on-scroll" style={{ animationDelay: '80ms' }}>
+        <div className="flex flex-wrap gap-2 mb-8">
           {t.gallery.categories.map((cat) => (
             <button
               key={cat.id}
@@ -93,7 +91,7 @@ export default function GallerySection({ lang, t }) {
               className={`px-4 py-2 rounded-full text-sm font-semibold transition-all cursor-pointer ${
                 activeCategory === cat.id
                   ? 'bg-[#7A5529] text-[#FFF8EB] shadow-sm'
-                  : 'bg-[#F6EFE4] text-[#3B2A1A] border border-[#DECBB0] hover:border-[#7A5529]'
+                  : 'bg-[#F5E7CE] text-[#3B2A1A] border border-[#C89D54]/45 hover:border-[#7A5529]'
               }`}
             >
               {cat.label}
@@ -101,7 +99,7 @@ export default function GallerySection({ lang, t }) {
           ))}
         </div>
 
-        {/* Photo Grid */}
+        {/* Photo Grid — Always opacity-100 across all category filters */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-5">
           {filtered.map((item, idx) => {
             const title = lang === 'te' ? item.titleTe : lang === 'hi' ? item.titleHi : item.titleEn
@@ -110,8 +108,7 @@ export default function GallerySection({ lang, t }) {
                 key={item.id}
                 type="button"
                 onClick={() => openLightbox(idx)}
-                className="reveal-on-scroll group relative aspect-[4/3] rounded-xl overflow-hidden bg-[#E6DFD5] border border-[#DDD4C8] text-left cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#7C5C3E]"
-                style={{ animationDelay: `${idx * 50}ms` }}
+                className="opacity-100 group relative aspect-[4/3] rounded-xl overflow-hidden bg-[#E6DFD5] border border-[#C89D54]/40 text-left cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#7A5529]"
               >
                 <img
                   src={assetUrl(item.src)}

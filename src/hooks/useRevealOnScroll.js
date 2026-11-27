@@ -7,6 +7,18 @@ export default function useRevealOnScroll() {
     const el = ref.current
     if (!el) return
 
+    const children = Array.from(el.querySelectorAll('.reveal-on-scroll'))
+    if (children.length === 0) return
+
+    const revealAll = () => {
+      children.forEach((child) => child.classList.add('revealed'))
+    }
+
+    if (typeof IntersectionObserver === 'undefined') {
+      revealAll()
+      return
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -16,13 +28,25 @@ export default function useRevealOnScroll() {
           }
         })
       },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
     )
 
-    const children = el.querySelectorAll('.reveal-on-scroll')
-    children.forEach((child) => observer.observe(child))
+    children.forEach((child) => {
+      const rect = child.getBoundingClientRect()
+      if (rect.top < window.innerHeight + 60) {
+        child.classList.add('revealed')
+      } else {
+        observer.observe(child)
+      }
+    })
 
-    return () => observer.disconnect()
+    // Safety fallback: ensure no section/card ever stays stuck at opacity: 0 on nav jump or fast scroll
+    const safetyTimer = setTimeout(revealAll, 600)
+
+    return () => {
+      clearTimeout(safetyTimer)
+      observer.disconnect()
+    }
   }, [])
 
   return ref

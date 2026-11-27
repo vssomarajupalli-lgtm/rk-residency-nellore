@@ -49,10 +49,10 @@ export default function AmenitiesSection({ t }) {
             return (
               <div
                 key={item.key}
-                className="reveal-on-scroll bg-[#FFFDF8] rounded-2xl border border-[#E2D3BC] border-t-4 border-t-[#C89D54] p-5 flex flex-col items-start gap-3 shadow-[0_8px_24px_rgba(60,40,20,0.06)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(60,40,20,0.14)] transition-all duration-300"
+                className="reveal-on-scroll bg-[#FCF7EE] rounded-2xl border border-[#C89D54]/40 border-t-4 border-t-[#C89D54] p-5 flex flex-col items-start gap-3 shadow-[0_8px_24px_rgba(60,40,20,0.06)] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(60,40,20,0.14)] transition-all duration-300"
                 style={{ animationDelay: `${idx * 60}ms` }}
               >
-                <div className="w-11 h-11 rounded-full bg-[#F3E2C6] text-[#8A5A1E] flex items-center justify-center">
+                <div className="w-11 h-11 rounded-full bg-[#EED9B5] text-[#7A4F1D] flex items-center justify-center">
                   <Icon className="w-5 h-5" />
                 </div>
                 <span className="text-sm sm:text-base font-semibold text-[#2B1A0E] leading-snug">
