@@ -73,7 +73,7 @@ function RoomCard({ room, lang, t, delay }) {
         </div>
 
         {/* Framed Warm-Champagne Inner Box for Description + Highlights */}
-        <div className="bg-[#FAF2E4] border border-[#C89D54]/35 rounded-xl p-4 mb-6">
+        <div className="bg-[#F3E4CB] border border-[#C89D54]/60 rounded-xl p-4 mb-6 shadow-inner">
           <p className="text-[15px] sm:text-base font-medium text-[#2B1A0E] leading-relaxed mb-4">
             {desc}
           </p>
@@ -168,13 +168,14 @@ export default function RoomsSection({ lang, t }) {
 
         {/* Rooms Header */}
         <div className="max-w-2xl mb-10 sm:mb-12 reveal-on-scroll">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9A6728] mb-2">
+          <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-[#F2DFBE] border border-[#C89D54]/65 text-[#7A4B16] text-xs font-bold tracking-[0.16em] uppercase mb-3">
             {t.roomsSection.eyebrow}
-          </p>
-          <h2 className="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2B1A0E] leading-tight">
+          </span>
+          <h2 className="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3A220F] leading-tight">
             {t.roomsSection.title}
           </h2>
-          <p className="mt-3 text-base font-medium text-[#2c2219] leading-relaxed">
+          <div className="w-20 h-1 rounded-full bg-gradient-to-r from-[#C89D54] to-[#7A5529] mt-3 mb-4" />
+          <p className="text-base font-medium text-[#2c2219] leading-relaxed">
             {t.roomsSection.subtitle}
           </p>
         </div>

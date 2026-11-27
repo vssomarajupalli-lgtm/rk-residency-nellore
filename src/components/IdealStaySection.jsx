@@ -10,13 +10,14 @@ export default function IdealStaySection({ t }) {
     <section id="ideal-stay" className="py-16 sm:py-24 bg-[#FCF7EE] border-y border-[#E2D3BC]" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-10 sm:mb-14 reveal-on-scroll">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9A6728] mb-2">
+          <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-[#F2DFBE] border border-[#C89D54]/65 text-[#7A4B16] text-xs font-bold tracking-[0.16em] uppercase mb-3">
             {t.idealStay.eyebrow}
-          </p>
-          <h2 className="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2B1A0E] leading-tight">
+          </span>
+          <h2 className="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3A220F] leading-tight">
             {t.idealStay.title}
           </h2>
-          <p className="mt-3 text-base font-medium text-[#2c2219] leading-relaxed">
+          <div className="w-20 h-1 rounded-full bg-gradient-to-r from-[#C89D54] to-[#7A5529] mt-3 mb-4" />
+          <p className="text-base font-medium text-[#2c2219] leading-relaxed">
             {t.idealStay.subtitle}
           </p>
         </div>

@@ -20,12 +20,13 @@ export default function FaqAndLocationSection({ lang, t }) {
       <section id="faq" className="py-16 sm:py-24 bg-[#F6EFE4] border-t border-[#E6D7C3]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-12 reveal-on-scroll">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9A6728] mb-2">
+            <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-[#F2DFBE] border border-[#C89D54]/65 text-[#7A4B16] text-xs font-bold tracking-[0.16em] uppercase mb-3">
               {t.faq.eyebrow}
-            </p>
-            <h2 className="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2B1A0E]">
+            </span>
+            <h2 className="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3A220F]">
               {t.faq.title}
             </h2>
+            <div className="w-20 h-1 rounded-full bg-gradient-to-r from-[#C89D54] to-[#7A5529] mt-3 mb-4 mx-auto" />
           </div>
 
           <div className="space-y-3">
@@ -67,12 +68,13 @@ export default function FaqAndLocationSection({ lang, t }) {
       <section id="location" className="py-16 sm:py-24 bg-[#EFE5D6] border-t border-[#DECBB0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-10 reveal-on-scroll">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9A6728] mb-2">
+            <span className="inline-flex items-center px-3.5 py-1 rounded-full bg-[#F2DFBE] border border-[#C89D54]/65 text-[#7A4B16] text-xs font-bold tracking-[0.16em] uppercase mb-3">
               {t.location.eyebrow}
-            </p>
-            <h2 className="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2B1A0E]">
+            </span>
+            <h2 className="font-serif-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3A220F]">
               {t.location.title}
             </h2>
+            <div className="w-20 h-1 rounded-full bg-gradient-to-r from-[#C89D54] to-[#7A5529] mt-3 mb-4" />
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">

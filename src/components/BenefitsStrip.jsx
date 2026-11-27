@@ -15,7 +15,7 @@ export default function BenefitsStrip({ t }) {
             return (
               <div
                 key={item.title}
-                className="reveal-on-scroll bg-gradient-to-br from-[#FDF6EA] to-[#F5E7CE] border border-[#C89D54]/55 rounded-2xl p-4 shadow-sm animate-soft-glow flex items-start gap-3.5"
+                className="reveal-on-scroll bg-gradient-to-br from-[#FFF9EE] to-[#F1DBB6] border-2 border-[#C89D54]/75 rounded-2xl p-4 shadow-[0_5px_0_#D8B784,0_10px_20px_rgba(43,28,16,0.10)] animate-soft-glow flex items-start gap-3.5"
                 style={{ animationDelay: `${idx * 90}ms` }}
               >
                 <div className="shrink-0 w-11 h-11 rounded-full bg-[#EED9B5] text-[#7A4F1D] flex items-center justify-center shadow-xs">
